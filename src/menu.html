@@ -1,489 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus Bites - University Cafe Menu</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#fff7ed',
-              100: '#ffedd5',
-              500: '#f97316',
-              600: '#ea580c',
-              700: '#c2410c',
-            },
-            tealbrand: {
-              500: '#0d9488',
-              600: '#0f766e',
-              900: '#134e4a',
-            }
-          },
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #f1f5f9;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
-      border-radius: 4px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bites - Menu</title>
+    <!-- Shared Stylesheet -->
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col pb-20 lg:pb-0">
+<body>
 
-  <!-- TOP HEADER & NAVIGATION -->
-  <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center space-x-3 cursor-pointer">
-        <div class="w-11 h-11 bg-gradient-to-tr from-brand-600 to-amber-400 rounded-xl flex items-center justify-center text-white shadow-lg shadow-brand-500/30">
-          <i class="fa-solid font-black fa-utensils text-xl"></i>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">CB</span>
+                <span class="brand-text">
+                    Campus Bites
+                    <small>Fresh Food, Happy Students!</small>
+                </span>
+            </a>
+
+            <!-- Shared Navigation -->
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="deals.html">Deals</a>
+                <a href="about.html">About</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="order.html">Order</a>
+                <a href="feedback.html">Feedback</a>
+            </nav>
         </div>
-        <div>
-          <h1 class="text-2xl font-extrabold tracking-tight text-slate-900 leading-none">Campus <span class="text-brand-600">Bites</span></h1>
-          <p class="text-xs font-semibold text-tealbrand-600 tracking-wide mt-1">Student Hub & Cafe</p>
-        </div>
-      </a>
+    </header>
 
-      <!-- Navigation Links (Desktop) -->
-      <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold text-slate-700">
-        <a href="index.html" class="hover:text-brand-600 transition-colors">Home</a>
-        <a href="menu.html" class="text-brand-600 font-bold border-b-2 border-brand-600 pb-1" aria-current="page">Menu</a>
-        <a href="deals.html" class="hover:text-brand-600 transition-colors">Deals</a>
-        <a href="order.html" class="hover:text-brand-600 transition-colors">How to Order</a>
-        <a href="about.html" class="hover:text-brand-600 transition-colors">About Us</a>
-        <a href="feedback.html" class="hover:text-brand-600 transition-colors">Feedback</a>
-      </nav>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <p class="eyebrow">FRESH & FAST ON CAMPUS</p>
+                <h1>
+                    Fuel Up Between<br>
+                    <span>Your Classes.</span>
+                </h1>
+                <p class="hero-description">
+                    Explore delicious breakfasts, main courses, fast food, and hot karak chai directly from the campus cafeteria.
+                </p>
+                <div class="hero-actions">
+                    <a href="order.html" class="button button-primary">How to Order</a>
+                    <a href="deals.html" class="button button-secondary">View Deals</a>
+                </div>
+            </div>
+            <div class="hero-decoration decoration-one"></div>
+            <div class="hero-decoration decoration-two"></div>
+        </section>
 
-      <!-- Search Bar (Desktop) -->
-      <div class="hidden md:flex flex-1 max-w-xs mx-6 relative">
-        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-        <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search menu..." 
-               class="w-full pl-11 pr-4 py-2 bg-slate-100 focus:bg-white border border-transparent focus:border-brand-500 rounded-full text-sm font-medium focus:outline-none transition-all">
-      </div>
+        <!-- Menu Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">EXPLORE OUR DISHES</p>
+                        <h2>Cafeteria Menu</h2>
+                    </div>
+                    <p>All items are freshly prepared with student-friendly pricing in PKR.</p>
+                </div>
 
-      <!-- Quick Action Cart Trigger Button -->
-      <button onclick="toggleCartDrawer()" class="relative flex items-center gap-2.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold px-5 py-2.5 rounded-full shadow-md transition-all active:scale-95">
-        <i class="fa-solid fa-bag-shopping text-lg"></i>
-        <span class="hidden sm:inline">My Tray</span>
-        <span id="headerCartCount" class="bg-white text-brand-600 text-xs font-extrabold px-2 py-0.5 rounded-full shadow-inner">0</span>
-      </button>
-    </div>
+                <!-- Category Filters -->
+                <div class="hero-actions" style="margin-bottom: 30px;">
+                    <button type="button" onclick="filterMenu('all')" class="button button-primary" id="btn-all">All Items</button>
+                    <button type="button" onclick="filterMenu('Breakfast')" class="button button-secondary" id="btn-Breakfast">Breakfast</button>
+                    <button type="button" onclick="filterMenu('Fast Food')" class="button button-secondary" id="btn-Fast Food">Fast Food</button>
+                    <button type="button" onclick="filterMenu('Main Course')" class="button button-secondary" id="btn-Main Course">Main Course</button>
+                    <button type="button" onclick="filterMenu('Beverages & Desserts')" class="button button-secondary" id="btn-Beverages & Desserts">Beverages & Desserts</button>
+                </div>
 
-    <!-- Mobile Navigation & Search Bar -->
-    <div class="lg:hidden px-4 py-2.5 border-t border-slate-100 bg-white flex flex-col gap-2.5">
-      <div class="flex items-center justify-around text-xs font-semibold text-slate-700 overflow-x-auto py-1">
-        <a href="index.html" class="px-2 py-1">Home</a>
-        <a href="menu.html" class="text-brand-600 font-bold px-2 py-1">Menu</a>
-        <a href="deals.html" class="px-2 py-1">Deals</a>
-        <a href="order.html" class="px-2 py-1">How to Order</a>
-        <a href="about.html" class="px-2 py-1">About</a>
-        <a href="feedback.html" class="px-2 py-1">Feedback</a>
-      </div>
-      <div class="relative w-full">
-        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-        <input type="text" id="mobileSearchInput" oninput="handleMobileSearch()" placeholder="Search menu items..." 
-               class="w-full pl-11 pr-4 py-1.5 bg-slate-100 focus:bg-white border border-transparent focus:border-brand-500 rounded-full text-sm font-medium focus:outline-none">
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO BANNER -->
-  <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-tealbrand-900 text-white py-8 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="space-y-2 text-center md:text-left">
-        <span class="inline-block bg-brand-500/20 text-brand-500 border border-brand-500/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-          <i class="fa-solid fa-bolt mr-1"></i> Fresh & Fast On Campus
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Fuel Up Between Classes</h2>
-        <p class="text-slate-300 text-sm sm:text-base max-w-xl">
-          Order delicious breakfasts, hearty main courses, spicy snacks, and hot karak chai directly from the university main cafeteria.
-        </p>
-      </div>
-      <div class="flex items-center gap-4 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
-        <div class="text-center px-3 border-r border-white/10">
-          <p class="text-xs text-slate-300">Cafeteria Hours</p>
-          <p class="text-sm font-bold text-amber-400">8:00 AM - 8:00 PM</p>
-        </div>
-        <div class="text-center px-3">
-          <p class="text-xs text-slate-300">Avg. Prep Time</p>
-          <p class="text-sm font-bold text-teal-300">10-15 Mins</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAIN CONTAINER -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full grid grid-cols-1 lg:grid-cols-12 gap-8">
-    
-    <!-- LEFT / MAIN CONTENT AREA (CATEGORIES & MENU LIST) -->
-    <main class="lg:col-span-8 space-y-8">
-
-      <!-- CATEGORY NAV TABS -->
-      <nav class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none" id="categoryNav">
-        <button onclick="filterCategory('all')" id="tab-all" class="category-btn active bg-brand-500 text-white font-semibold px-5 py-2.5 rounded-full text-sm whitespace-nowrap shadow-sm transition-all">
-          🔥 All Items
-        </button>
-        <button onclick="filterCategory('Breakfast')" id="tab-Breakfast" class="category-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold px-5 py-2.5 rounded-full text-sm whitespace-nowrap transition-all">
-          🍳 Breakfast
-        </button>
-        <button onclick="filterCategory('Fast Food')" id="tab-Fast Food" class="category-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold px-5 py-2.5 rounded-full text-sm whitespace-nowrap transition-all">
-          🍔 Fast Food
-        </button>
-        <button onclick="filterCategory('Main Course')" id="tab-Main Course" class="category-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold px-5 py-2.5 rounded-full text-sm whitespace-nowrap transition-all">
-          🍛 Main Course
-        </button>
-        <button onclick="filterCategory('Beverages & Desserts')" id="tab-Beverages & Desserts" class="category-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 font-semibold px-5 py-2.5 rounded-full text-sm whitespace-nowrap transition-all">
-          ☕ Beverages & Desserts
-        </button>
-      </nav>
-
-      <!-- MENU DISPLAY CONTAINER -->
-      <div id="menuContainer" class="space-y-10">
-        <!-- Rendered dynamically via JavaScript -->
-      </div>
+                <!-- Food Cards Grid -->
+                <div class="feature-grid" id="menu-grid">
+                    <!-- Dynamic Menu Items Injected via JS -->
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- RIGHT SIDEBAR (DESKTOP TRAY / CART DRAWER) -->
-    <aside class="hidden lg:block lg:col-span-4">
-      <div class="sticky top-28 bg-white border border-slate-200 rounded-3xl shadow-sm p-6 space-y-6">
-        <div class="flex items-center justify-between border-b border-slate-100 pb-4">
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-receipt text-brand-500 text-xl"></i>
-            <h3 class="text-xl font-bold text-slate-900">Your Order Tray</h3>
-          </div>
-          <span id="desktopTrayItemCount" class="text-xs font-bold bg-slate-100 text-slate-600 px-3 py-1 rounded-full">0 items</span>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a href="index.html" class="footer-brand">Campus Bites</a>
+            <p>Fresh Food, Happy Students! &bull; Prices in PKR (Rs.)</p>
+            <a href="feedback.html">Share Your Feedback</a>
         </div>
+    </footer>
 
-        <!-- Tray Items List -->
-        <div id="desktopTrayItems" class="max-h-80 overflow-y-auto custom-scrollbar space-y-3 divide-y divide-slate-100 pr-1">
-          <!-- Populated by JS -->
-        </div>
+    <!-- JavaScript Logic -->
+    <script>
+        const menuData = [
+            // Breakfast
+            { name: 'Anda Paratha Roll', category: 'Breakfast', price: 180, desc: 'Crispy flaky paratha wrapped with a fluffy spiced fried egg and mint chutney.', icon: '🍳' },
+            { name: 'Halwa Puri Combo', category: 'Breakfast', price: 250, desc: '2 fresh hot puris served with sweet semolina halwa and spicy chickpea curry.', icon: '🍲' },
+            { name: 'Omelette & Toast', category: 'Breakfast', price: 160, desc: '2 toasted buttered bread slices served with a 2-egg masala omelette.', icon: '🍞' },
+            { name: 'Chana Paratha', category: 'Breakfast', price: 200, desc: 'A traditional plain lachha paratha served with hot lahori chana gravy.', icon: '🫓' },
 
-        <!-- Order Summary Calculation -->
-        <div id="desktopTraySummary" class="border-t border-slate-200 pt-4 space-y-2 text-sm text-slate-600 hidden">
-          <div class="flex justify-between">
-            <span>Subtotal</span>
-            <span id="desktopSubtotal" class="font-semibold text-slate-800">Rs. 0</span>
-          </div>
-          <div class="flex justify-between">
-            <span>GST (5%)</span>
-            <span id="desktopTax" class="font-semibold text-slate-800">Rs. 0</span>
-          </div>
-          <div class="flex justify-between text-base font-extrabold text-slate-900 border-t border-dashed border-slate-200 pt-3 mt-2">
-            <span>Total Payable</span>
-            <span id="desktopTotal" class="text-brand-600">Rs. 0</span>
-          </div>
+            // Fast Food
+            { name: 'Crispy Zinger Burger', category: 'Fast Food', price: 380, desc: 'Deep-fried spicy chicken thigh fillet with garlic mayo and fresh lettuce.', icon: '🍔' },
+            { name: 'Club Sandwich & Chips', category: 'Fast Food', price: 340, desc: 'Triple-decker sandwich loaded with chicken, egg, cheese, and crisp fries.', icon: '🥪' },
+            { name: 'Loaded Cheese Fries', category: 'Fast Food', price: 280, desc: 'Golden potato fries smothered in warm cheddar cheese sauce and jalapeños.', icon: '🍟' },
+            { name: 'Beef Cheese Burger', category: 'Fast Food', price: 450, desc: 'Smashed beef patty topped with melted cheddar cheese and pickles.', icon: '🍔' },
 
-          <button onclick="checkoutOrder()" class="w-full mt-4 bg-brand-500 hover:bg-brand-600 text-white font-bold py-3.5 rounded-2xl shadow-lg shadow-brand-500/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
-            <i class="fa-solid fa-check-circle"></i> Confirm Order
-          </button>
-        </div>
+            // Main Course
+            { name: 'Chicken Dum Biryani', category: 'Main Course', price: 320, desc: 'Fragrant basmati rice cooked with marinated chicken and aromatic spices.', icon: '🍛' },
+            { name: 'Chicken Karahi Plate', category: 'Main Course', price: 420, desc: 'Wok-cooked chicken gravy prepared with fresh tomatoes, ginger, and 2 Naans.', icon: '🍲' },
+            { name: 'Daal Chawal Special', category: 'Main Course', price: 220, desc: 'Comfort meal of yellow lentils with garlic tarka served over basmati rice.', icon: '🍚' },
+            { name: 'Special Beef Nihari', category: 'Main Course', price: 480, desc: 'Slow-cooked tender beef stew garnished with ginger, coriander, and lemon.', icon: '🍲' },
 
-        <!-- Empty Tray State -->
-        <div id="desktopEmptyTray" class="text-center py-8 space-y-3">
-          <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto text-slate-300 text-2xl">
-            <i class="fa-solid fa-utensils"></i>
-          </div>
-          <p class="text-sm text-slate-500 font-medium">Your tray is empty.</p>
-          <p class="text-xs text-slate-400">Click "+ Add" on any item to build your food order!</p>
-        </div>
-      </div>
-    </aside>
-  </div>
+            // Beverages & Desserts
+            { name: 'Special Karak Chai', category: 'Beverages & Desserts', price: 80, desc: 'Strongly brewed milk tea with green cardamom and saffron aroma.', icon: '☕' },
+            { name: 'Fresh Mango Shake', category: 'Beverages & Desserts', price: 220, desc: 'Chilled thick milk shake blended with pure mango pulp.', icon: '🥭' },
+            { name: 'Gulab Jamun (2 Pcs)', category: 'Beverages & Desserts', price: 150, desc: 'Soft milk-solid fried dumplings soaked in warm sugar syrup.', icon: '🍩' },
+            { name: 'Chocolate Lava Cake', category: 'Beverages & Desserts', price: 300, desc: 'Warm chocolate cake with a molten chocolate center.', icon: '🍰' }
+        ];
 
-  <!-- MOBILE SLIDE-OVER DRAWER -->
-  <div id="mobileCartOverlay" onclick="toggleCartDrawer()" class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40 hidden transition-opacity"></div>
-  <div id="mobileCartDrawer" class="fixed right-0 top-0 h-full w-full max-w-md bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col">
-    <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-900 text-white">
-      <div class="flex items-center gap-3">
-        <i class="fa-solid fa-bag-shopping text-brand-500 text-xl"></i>
-        <h3 class="text-lg font-bold">Your Tray</h3>
-      </div>
-      <button onclick="toggleCartDrawer()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </div>
+        function renderMenu(category = 'all') {
+            const grid = document.getElementById('menu-grid');
+            grid.innerHTML = '';
 
-    <div id="mobileTrayItems" class="flex-1 overflow-y-auto p-5 space-y-4 divide-y divide-slate-100 custom-scrollbar"></div>
+            const filtered = category === 'all' 
+                ? menuData 
+                : menuData.filter(item => item.category === category);
 
-    <div id="mobileTrayFooter" class="p-5 border-t border-slate-200 bg-slate-50 space-y-3 hidden">
-      <div class="flex justify-between text-sm text-slate-600">
-        <span>Subtotal</span>
-        <span id="mobileSubtotal" class="font-semibold text-slate-800">Rs. 0</span>
-      </div>
-      <div class="flex justify-between text-sm text-slate-600">
-        <span>GST (5%)</span>
-        <span id="mobileTax" class="font-semibold text-slate-800">Rs. 0</span>
-      </div>
-      <div class="flex justify-between text-lg font-black text-slate-900 pt-2 border-t border-dashed border-slate-300">
-        <span>Total Amount</span>
-        <span id="mobileTotal" class="text-brand-600">Rs. 0</span>
-      </div>
-      <button onclick="checkoutOrder()" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3.5 rounded-2xl shadow-md active:scale-95 transition-all">
-        Confirm & Pay
-      </button>
-    </div>
-  </div>
-
-  <!-- ITEM DETAIL MODAL -->
-  <div id="itemModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl transform transition-all">
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <!-- FLOATING MOBILE TRAY TRIGGER BAR -->
-  <div class="lg:hidden fixed bottom-4 left-4 right-4 z-20">
-    <button onclick="toggleCartDrawer()" class="w-full bg-slate-900 text-white font-bold py-3.5 px-6 rounded-2xl shadow-xl flex items-center justify-between border border-slate-700">
-      <div class="flex items-center gap-3">
-        <span id="floatingCartBadge" class="bg-brand-500 text-white text-xs font-black w-6 h-6 rounded-full flex items-center justify-center">0</span>
-        <span>View Order Tray</span>
-      </div>
-      <span id="floatingCartTotal" class="text-brand-500 font-extrabold">Rs. 0</span>
-    </button>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-8 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
-      <p class="text-sm font-semibold text-slate-200">Campus Bites Cafe & Student Dining</p>
-      <p class="text-xs text-slate-500">Built for Assignment &bull; Prices in PKR (Rs.)</p>
-    </div>
-  </footer>
-
-  <!-- JAVASCRIPT LOGIC -->
-  <script>
-    const menuData = [
-      { id: 'b1', name: 'Anda Paratha Roll', category: 'Breakfast', price: 180, badge: 'Student Deal', badgeColor: 'bg-emerald-100 text-emerald-800', description: 'Crispy flaky paratha wrapped with a fluffy spiced fried egg, green chilies, and tangy mint chutney.', image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=500&auto=format&fit=crop&q=80' },
-      { id: 'b2', name: 'Halwa Puri Combo', category: 'Breakfast', price: 250, badge: 'Popular', badgeColor: 'bg-amber-100 text-amber-800', description: '2 fresh hot puris served with sweet semolina halwa, spicy chickpea curry (chana), and pickle.', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&auto=format&fit=crop&q=80' },
-      { id: 'b3', name: 'Omelette & Toast', category: 'Breakfast', price: 160, badge: 'Classic', badgeColor: 'bg-blue-100 text-blue-800', description: '2 toasted buttered bread slices served with a 2-egg Pakistani style masala omelette.', image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=500&auto=format&fit=crop&q=80' },
-      { id: 'b4', name: 'Chana Paratha', category: 'Breakfast', price: 200, badge: 'Vegetarian', badgeColor: 'bg-teal-100 text-teal-800', description: 'A traditional plain lachha paratha served with hot lahori spicy chana gravy.', image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=500&auto=format&fit=crop&q=80' },
-
-      { id: 'f1', name: 'Crispy Zinger Burger', category: 'Fast Food', price: 380, badge: 'Bestseller', badgeColor: 'bg-brand-100 text-brand-800', description: 'Deep-fried spicy chicken thigh fillet with garlic mayo, fresh lettuce, and soft sesame bun.', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=80' },
-      { id: 'f2', name: 'Club Sandwich & Chips', category: 'Fast Food', price: 340, badge: 'Popular', badgeColor: 'bg-amber-100 text-amber-800', description: 'Triple-decker sandwich loaded with shredded chicken, egg, cheese, cucumber, and crisp fries.', image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80' },
-      { id: 'f3', name: 'Loaded Cheese Fries', category: 'Fast Food', price: 280, badge: 'Cheesy', badgeColor: 'bg-yellow-100 text-yellow-800', description: 'Golden potato fries smothered in warm cheddar cheese sauce, jalapeños, and secret spices.', image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?w=500&auto=format&fit=crop&q=80' },
-      { id: 'f4', name: 'Beef Cheese Burger', category: 'Fast Food', price: 450, badge: 'Juicy', badgeColor: 'bg-red-100 text-red-800', description: 'Charbroiled smashed beef patty topped with melted cheddar cheese, pickles, and barbecue mayo.', image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500&auto=format&fit=crop&q=80' },
-
-      { id: 'm1', name: 'Chicken Dum Biryani', category: 'Main Course', price: 320, badge: 'Must Try', badgeColor: 'bg-red-100 text-red-800', description: 'Fragrant basmati rice cooked with marinated chicken piece, aromatic spices, served with mint raita.', image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&auto=format&fit=crop&q=80' },
-      { id: 'm2', name: 'Chicken Karahi Plate', category: 'Main Course', price: 420, badge: 'Spicy', badgeColor: 'bg-orange-100 text-orange-800', description: 'Wok-cooked chicken gravy prepared with fresh tomatoes, ginger, green chilies, and 2 Naans.', image: 'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=500&auto=format&fit=crop&q=80' },
-      { id: 'm3', name: 'Daal Chawal Special', category: 'Main Course', price: 220, badge: 'Vegetarian', badgeColor: 'bg-teal-100 text-teal-800', description: 'Comfort meal of yellow lentils with garlic tarka, served over steamed basmati rice with salad.', image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=500&auto=format&fit=crop&q=80' },
-      { id: 'm4', name: 'Special Beef Nihari', category: 'Main Course', price: 480, badge: 'Chef Special', badgeColor: 'bg-purple-100 text-purple-800', description: 'Slow-cooked tender beef stew garnished with fried onions, julienne ginger, coriander, and lemon.', image: 'https://images.unsplash.com/photo-1545247181-516773cae754?w=500&auto=format&fit=crop&q=80' },
-
-      { id: 'd1', name: 'Special Karak Chai', category: 'Beverages & Desserts', price: 80, badge: 'Hot Seller', badgeColor: 'bg-amber-100 text-amber-800', description: 'Strongly brewed milk tea with green cardamom and saffron aroma, perfect for study breaks.', image: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80' },
-      { id: 'd2', name: 'Fresh Mango Shake', category: 'Beverages & Desserts', price: 220, badge: 'Refreshing', badgeColor: 'bg-yellow-100 text-yellow-800', description: 'Chilled thick milk shake blended with pure mango pulp and ice cream topping.', image: 'https://images.unsplash.com/photo-1546173159-315724a31696?w=500&auto=format&fit=crop&q=80' },
-      { id: 'd3', name: 'Gulab Jamun (2 Pcs)', category: 'Beverages & Desserts', price: 150, badge: 'Sweet', badgeColor: 'bg-pink-100 text-pink-800', description: 'Soft milk-solid fried dumplings soaked in cardamom infused warm sugar syrup.', image: 'https://images.unsplash.com/photo-1599785209707-a456fc1337cc?w=500&auto=format&fit=crop&q=80' },
-      { id: 'd4', name: 'Chocolate Lava Cake', category: 'Beverages & Desserts', price: 300, badge: 'Premium', badgeColor: 'bg-indigo-100 text-indigo-800', description: 'Warm chocolate cake with a molten chocolate center, served with a dusting of icing sugar.', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=80' }
-    ];
-
-    let cart = [];
-    let activeCategory = 'all';
-
-    window.onload = function() {
-      renderMenu();
-      updateCartUI();
-    };
-
-    function renderMenu(query = '') {
-      const container = document.getElementById('menuContainer');
-      container.innerHTML = '';
-      const categories = ['Breakfast', 'Fast Food', 'Main Course', 'Beverages & Desserts'];
-      const categoriesToRender = activeCategory === 'all' ? categories : categories.filter(c => c === activeCategory);
-      let totalItemsFound = 0;
-
-      categoriesToRender.forEach(cat => {
-        const items = menuData.filter(item => item.category === cat && (item.name.toLowerCase().includes(query.toLowerCase()) || item.description.toLowerCase().includes(query.toLowerCase())));
-        if (items.length > 0) {
-          totalItemsFound += items.length;
-          const section = document.createElement('section');
-          section.className = 'space-y-4';
-          section.innerHTML = `
-            <div class="flex items-center gap-3 border-b border-slate-200 pb-3">
-              <h2 class="text-2xl font-bold text-slate-900">${cat}</h2>
-              <span class="text-xs font-bold bg-slate-200 text-slate-700 px-2.5 py-0.5 rounded-full">${items.length} items</span>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" id="grid-${cat.replace(/\s+/g, '')}"></div>
-          `;
-          container.appendChild(section);
-          const grid = document.getElementById(`grid-${cat.replace(/\s+/g, '')}`);
-
-          items.forEach(item => {
-            const card = document.createElement('div');
-            card.className = 'bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-all overflow-hidden flex flex-col justify-between group';
-            card.innerHTML = `
-              <div class="relative h-44 overflow-hidden bg-slate-100 cursor-pointer" onclick="openItemModal('${item.id}')">
-                <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                <span class="absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full ${item.badgeColor} shadow-sm">${item.badge}</span>
-              </div>
-              <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
-                <div class="cursor-pointer" onclick="openItemModal('${item.id}')">
-                  <div class="flex justify-between items-start gap-2">
-                    <h3 class="font-bold text-slate-900 text-lg group-hover:text-brand-600 transition-colors">${item.name}</h3>
-                    <span class="font-extrabold text-brand-600 whitespace-nowrap">Rs. ${item.price}</span>
-                  </div>
-                  <p class="text-slate-500 text-xs line-clamp-2 mt-1 leading-relaxed">${item.description}</p>
-                </div>
-                <div class="pt-2 flex items-center justify-between border-t border-slate-100">
-                  <button onclick="openItemModal('${item.id}')" class="text-xs font-semibold text-slate-500 hover:text-slate-800"><i class="fa-solid fa-circle-info"></i> Details</button>
-                  <button onclick="addToCart('${item.id}')" class="bg-brand-50 hover:bg-brand-500 text-brand-600 hover:text-white border border-brand-200 hover:border-transparent font-bold text-xs px-4 py-2 rounded-xl active:scale-95 transition-all flex items-center gap-1.5"><i class="fa-solid fa-plus"></i> Add</button>
-                </div>
-              </div>
-            `;
-            grid.appendChild(card);
-          });
+            filtered.forEach(item => {
+                const card = document.createElement('article');
+                card.className = 'feature-card';
+                card.innerHTML = `
+                    <div class="feature-icon" aria-hidden="true">${item.icon}</div>
+                    <h3>${item.name}</h3>
+                    <p>${item.desc}</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                        <span style="font-weight: 800; color: var(--green); font-size: 16px;">Rs. ${item.price}</span>
+                        <a href="order.html" class="text-link">Order Now →</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
         }
-      });
 
-      if (totalItemsFound === 0) {
-        container.innerHTML = `<div class="text-center py-16 bg-white rounded-3xl border border-dashed border-slate-300 p-8 space-y-3"><i class="fa-solid fa-magnifying-glass text-4xl text-slate-300"></i><h3 class="text-lg font-bold text-slate-700">No menu items found</h3></div>`;
-      }
-    }
+        function filterMenu(category) {
+            renderMenu(category);
+            const buttons = document.querySelectorAll('.hero-actions button');
+            buttons.forEach(btn => {
+                btn.className = 'button button-secondary';
+            });
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.className = 'button button-primary';
+            }
+        }
 
-    function filterCategory(cat) {
-      activeCategory = cat;
-      document.querySelectorAll('.category-btn').forEach(btn => {
-        btn.classList.remove('bg-brand-500', 'text-white');
-        btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-      });
-      const activeBtn = document.getElementById(`tab-${cat}`);
-      if (activeBtn) {
-        activeBtn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-        activeBtn.classList.add('bg-brand-500', 'text-white');
-      }
-      renderMenu(document.getElementById('searchInput').value);
-    }
-
-    function handleSearch() { renderMenu(document.getElementById('searchInput').value); }
-    function handleMobileSearch() { renderMenu(document.getElementById('mobileSearchInput').value); }
-
-    function addToCart(id) {
-      const item = menuData.find(i => i.id === id);
-      if (!item) return;
-      const existing = cart.find(c => c.id === id);
-      if (existing) existing.qty += 1;
-      else cart.push({ ...item, qty: 1 });
-      updateCartUI();
-    }
-
-    function updateQuantity(id, change) {
-      const index = cart.findIndex(c => c.id === id);
-      if (index > -1) {
-        cart[index].qty += change;
-        if (cart[index].qty <= 0) cart.splice(index, 1);
-      }
-      updateCartUI();
-    }
-
-    function updateCartUI() {
-      const count = cart.reduce((a, b) => a + b.qty, 0);
-      const subtotal = cart.reduce((a, b) => a + (b.price * b.qty), 0);
-      const tax = Math.round(subtotal * 0.05);
-      const total = subtotal + tax;
-
-      document.getElementById('headerCartCount').innerText = count;
-      document.getElementById('floatingCartBadge').innerText = count;
-      document.getElementById('desktopTrayItemCount').innerText = `${count} items`;
-      document.getElementById('floatingCartTotal').innerText = `Rs. ${total}`;
-
-      const dList = document.getElementById('desktopTrayItems');
-      const mList = document.getElementById('mobileTrayItems');
-      const dEmpty = document.getElementById('desktopEmptyTray');
-      const dSum = document.getElementById('desktopTraySummary');
-      const mFoot = document.getElementById('mobileTrayFooter');
-
-      if (cart.length === 0) {
-        dEmpty.classList.remove('hidden');
-        dSum.classList.add('hidden');
-        mFoot.classList.add('hidden');
-        dList.innerHTML = mList.innerHTML = `<div class="text-center py-12 text-slate-400 text-sm">Your tray is empty.</div>`;
-        return;
-      }
-
-      dEmpty.classList.add('hidden');
-      dSum.classList.remove('hidden');
-      mFoot.classList.remove('hidden');
-
-      let html = '';
-      cart.forEach(item => {
-        html += `
-          <div class="flex items-center justify-between py-3">
-            <div class="flex-1 pr-2"><h4 class="font-bold text-slate-800 text-sm">${item.name}</h4><p class="text-xs text-brand-600 font-bold">Rs. ${item.price * item.qty} (${item.qty}×)</p></div>
-            <div class="flex items-center border border-slate-200 rounded-lg bg-slate-50">
-              <button onclick="updateQuantity('${item.id}', -1)" class="w-7 h-7 flex items-center justify-center text-slate-600">-</button>
-              <span class="w-7 text-center text-xs font-bold">${item.qty}</span>
-              <button onclick="updateQuantity('${item.id}', 1)" class="w-7 h-7 flex items-center justify-center text-slate-600">+</button>
-            </div>
-          </div>
-        `;
-      });
-      dList.innerHTML = mList.innerHTML = html;
-
-      document.getElementById('desktopSubtotal').innerText = document.getElementById('mobileSubtotal').innerText = `Rs. ${subtotal}`;
-      document.getElementById('desktopTax').innerText = document.getElementById('mobileTax').innerText = `Rs. ${tax}`;
-      document.getElementById('desktopTotal').innerText = document.getElementById('mobileTotal').innerText = `Rs. ${total}`;
-    }
-
-    function openItemModal(id) {
-      const item = menuData.find(i => i.id === id);
-      if (!item) return;
-      document.getElementById('modalContent').innerHTML = `
-        <div class="relative h-56 bg-slate-100">
-          <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover">
-          <button onclick="closeItemModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-slate-900/60 text-white flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
-          <span class="absolute bottom-3 left-3 text-xs font-bold px-3 py-1 rounded-full ${item.badgeColor}">${item.badge}</span>
-        </div>
-        <div class="p-6 space-y-4">
-          <div class="flex justify-between items-baseline"><h3 class="text-2xl font-black text-slate-900">${item.name}</h3><span class="text-xl font-black text-brand-600">Rs. ${item.price}</span></div>
-          <p class="text-slate-600 text-sm">${item.description}</p>
-          <button onclick="addToCart('${item.id}'); closeItemModal();" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-2xl">Add to Order Tray</button>
-        </div>
-      `;
-      document.getElementById('itemModal').classList.remove('hidden');
-    }
-    function closeItemModal() { document.getElementById('itemModal').classList.add('hidden'); }
-    function toggleCartDrawer() {
-      document.getElementById('mobileCartDrawer').classList.toggle('translate-x-full');
-      document.getElementById('mobileCartOverlay').classList.toggle('hidden');
-    }
-    function checkoutOrder() {
-      if (cart.length === 0) return;
-      const total = cart.reduce((a, b) => a + (b.price * b.qty), 0) * 1.05;
-      document.getElementById('modalContent').innerHTML = `
-        <div class="p-6 text-center space-y-4">
-          <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl"><i class="fa-solid fa-circle-check"></i></div>
-          <h3 class="text-2xl font-black">Order Sent to Counter!</h3>
-          <p class="text-slate-600 text-sm">Please pay <strong class="text-slate-900">Rs. ${Math.round(total)}</strong> at the token counter.</p>
-          <button onclick="cart=[]; updateCartUI(); closeItemModal();" class="w-full bg-slate-900 text-white font-bold py-3 rounded-2xl">Done</button>
-        </div>
-      `;
-      document.getElementById('itemModal').classList.remove('hidden');
-    }
-  </script>
+        // Initial Load
+        window.onload = function() {
+            renderMenu('all');
+        };
+    </script>
 </body>
 </html>
