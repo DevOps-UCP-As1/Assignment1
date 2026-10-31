@@ -8,19 +8,24 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-    <header>
-        <link rel="stylesheet" href="../styles/style.css">
-        <h1>Campus Cafeteria</h1>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="deals.html" class="active">Deals</a>
-            <a href="about.html">About</a>
-            <a href="menu.html">Menu</a>
-            <a href="order.html">Order</a>
-            <a href="feedback.html">Feedback & Contact</a>
-        </nav>
-    </header>
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="brand" href="index.html" aria-label="Campus Bites home">
+                <span class="brand-icon">CB</span>
+                <span class="brand-text">Campus Bites<small>Fresh food. Campus energy.</small></span>
+            </a>
 
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html" >Home</a>
+                <a href="menu.html">Menu</a>
+		<a href="deals.html">Deals</a>
+        <a href="order.html">Order</a>
+        <a href="about.html">About</a>
+        <a href="feedback.html" class="active" aria-current="page">Feedback & Contact</a>
+            </nav>
+
+        </div>
+    </header>
     <main>
         <section class="contact">
             <h2>Contact Us</h2>
