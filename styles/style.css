@@ -512,3 +512,186 @@ a {
         flex-direction: column;
     }
 }
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f5;
+    color: #26352d;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #215c45;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #c9f2d8;
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 45px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 28px;
+    align-items: start;
+}
+
+/* Contact and Feedback Cards */
+.contact,
+.feedback {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+h2 {
+    color: #215c45;
+    margin-bottom: 18px;
+    font-size: 23px;
+}
+
+.contact p {
+    margin-bottom: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* Feedback Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd6cf;
+    border-radius: 6px;
+    font: inherit;
+    color: #26352d;
+    background-color: #fff;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #78b89a;
+    border-color: #215c45;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #215c45;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #174431;
+}
+
+button:focus-visible,
+nav a:focus-visible {
+    outline: 3px solid #e5a93d;
+    outline-offset: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        margin: 25px auto;
+        gap: 20px;
+    }
+
+    .contact,
+    .feedback {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 12px;
+    }
+
+    .contact,
+    .feedback {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+}
+
